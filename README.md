@@ -6,7 +6,7 @@
 
 ## Usage:
 - Run python script
--  Select from which type of ID you want to enter (1-4)
+- Select from list which type of ID you want to enter (1-4)
 - Paste or write Steam ID and press Enter
 - All types of SteamID would be printed in this order: 
 -- SteamID
