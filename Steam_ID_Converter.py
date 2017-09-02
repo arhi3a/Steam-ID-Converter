@@ -29,29 +29,62 @@ def SteamID_conv():  # 1
     print('Steam ID32: ', Steam_ID_32_conv)  # Print SteamID32
     print('Steam ID64: ', Steam_ID_64_conv)  # Print SteamID64
     print(pause)
-    main_menu()
+    # Save
+    userinputx = input('Do you want to save this SteamID to history?' '\n' '1. Yes' '\n' '2. No' '\n' 'Answer: ')
+    if userinputx == '1':
+        file = open('history.txt', 'a')
+        file.write('\n' + 'Steam ID: ' + (userinput2) + '\n' + 'Steam ID3: ' + (Steam_ID3) + '\n' +
+                   'Steam ID32: ' + str(Steam_ID_32_conv) + '\n' + 'Steam ID64: ' + str(Steam_ID_64_conv) + '\n' + (
+                       pause))
+        file.close()
+        main_menu()
+    else:
+        main_menu()
 
 
 def Steam3_conv():  # 2
     print('Please Enter Steam3: (U:X:XXXXXXXX)')
-    userunput5 = input('Steam3: ')
-    Steam3_2_32_conv = (int(userunput5[4:]))
+    userinput5 = input('Steam3: ')
+    Steam3_2_32_conv = (int(userinput5[4:]))
     Steam3_2_64_conv = int(Steam3_2_32_conv) + int(ID_change_value)
     Steam3_2_ID_conv = int(Steam3_2_32_conv) // int(2)
     print(pause)
     if (int(Steam3_2_64_conv) % 2 == 0):  # Even
         print('SteamID:   Steam_0:0:' + str(Steam3_2_ID_conv))  # Print SteamID
-        print('Steam3:    ' + userunput5)  # Print Steam3 from userinput
+        print('Steam3:    ' + userinput5)  # Print Steam3 from userinput
         print('SteamID32: ' + str(Steam3_2_32_conv))  # Print SteamID32
         print('SteamID64: ' + str(Steam3_2_64_conv))  # Print SteamID64 form user input
         print(pause)
+        # Save
+        userinputx = input('Do you want to save this SteamID to history?' '\n' '1. Yes' '\n' '2. No' '\n' 'Answer: ')
+        if userinputx == '1':
+            file = open('history.txt', 'a')
+            file.write(
+                '\n' + 'Steam ID: Steam_0:0:' + str(Steam3_2_ID_conv) + '\n' + 'Steam ID3: ' + (userinput5) + '\n' +
+                'Steam ID32: ' + str(Steam3_2_32_conv) + '\n' + 'Steam ID64: ' + str(Steam3_2_64_conv) +
+                '\n' + (pause))
+            file.close()
+            main_menu()
+        else:
+            main_menu()
     else:  # Odd
         print('SteamID:   Steam_0:1:' + str(Steam3_2_ID_conv))  # Print SteamID
-        print('Steam3:    ' + userunput5)  # Print Steam3 from userinput
+        print('Steam3:    ' + userinput5)  # Print Steam3 from userinput
         print('SteamID32: ' + str(Steam3_2_32_conv))  # Print SteamID32
         print('SteamID64: ' + str(Steam3_2_64_conv))  # Print SteamID64 form user input
         print(pause)
-    main_menu()
+        # Save
+        userinputx = input('Do you want to save this SteamID to history?' '\n' '1. Yes' '\n' '2. No' '\n' 'Answer: ')
+        if userinputx == '1':
+            file = open('history.txt', 'a')
+            file.write(
+                '\n' + 'Steam ID: Steam_0:1:' + str(Steam3_2_ID_conv) + '\n' + 'Steam ID3: ' + (userinput5) + '\n' +
+                'Steam ID32: ' + str(Steam3_2_32_conv) + '\n' + 'Steam ID64: ' + str(Steam3_2_64_conv) +
+                '\n' + (pause))
+            file.close()
+            main_menu()
+        else:
+            main_menu()
 
 
 def SteamID32_conv():  # 3
@@ -67,14 +100,35 @@ def SteamID32_conv():  # 3
         print('SteamID32: ' + userinput3)  # Print SteamID32 (form user input)
         print('SteamID64: ' + str(SteamID_2_64_conv))  # Print SteamID64
         print(pause)
-        main_menu()
+        # Save
+        userinputx = input('Do you want to save this SteamID to history?' '\n' '1. Yes' '\n' '2. No' '\n' 'Answer: ')
+        if userinputx == '1':
+            file = open('history.txt', 'a')
+            file.write('\n' + 'Steam ID: Steam_0:0:' + str(Steam1) + '\n' + 'Steam3: U:1:' + (userinput3) + '\n' +
+                       'Steam ID32: ' + (userinput3) + '\n' + 'Steam ID64: ' + str(SteamID_2_64_conv) +
+                       '\n' + (pause))
+            file.close()
+            main_menu()
+        else:
+            main_menu()
     else:
         print('SteamID:   Steam_0:1:' + str(SteamID_2_32_conv))  # print SteamID
         print('Steam3:    U:1:' + userinput3)  # Print Steam3
         print('SteamID32: ' + userinput3)  # Print SteamID32 (form user input)
         print('SteamID64: ' + str(SteamID_2_64_conv))  # Print SteamID64
         print(pause)
-        main_menu()
+        # Save
+        userinputx = input('Do you want to save this SteamID to history?' '\n' '1. Yes' '\n' '2. No' '\n' 'Answer: ')
+        if userinputx == '1':
+            file = open('history.txt', 'a')
+            file.write(
+                '\n' + 'Steam ID: Steam_0:1:' + str(SteamID_2_64_conv) + '\n' + 'Steam3: U:1:' + (userinput3) + '\n' +
+                'Steam ID32: ' + (userinput3) + '\n' + 'Steam ID64: ' + str(SteamID_2_64_conv) +
+                '\n' + (pause))
+            file.close()
+            main_menu()
+        else:
+            main_menu()
 
 
 def SteamID64_conv():  # 4
@@ -91,14 +145,34 @@ def SteamID64_conv():  # 4
         print('SteamID32: ' + str(SteamID32_64_conv))  # Print SteamID32
         print('SteamID64: ' + userinput4)  # Print SteamID64 form user input
         print(pause)
-        main_menu()
+        # Save
+        userinputx = input('Do you want to save this SteamID to history?' '\n' '1. Yes' '\n' '2. No' '\n' 'Answer: ')
+        if userinputx == '1':
+            file = open('history.txt', 'a')
+            file.write(
+                '\n' + 'Steam ID: Steam_0:0:' + str(Steam2) + '\n' + 'Steam3: U:1:' + str(SteamID32_64_conv) + '\n' +
+                'Steam ID32: ' + str(SteamID32_64_conv) + '\n' + 'Steam ID64: ' + (userinput4) +
+                '\n' + (pause))
+            file.close()
+            main_menu()
+        else:
+            main_menu()
     else:  # ODD
         print('SteamID:   Steam_0:1:' + str(SteamID_2_64_conv))  # Print SteamID
         print('Steam3:    U:1:' + str(SteamID32_64_conv))  # Print Steam3
         print('SteamID32: ' + str(SteamID32_64_conv))  # Print SteamID32
         print('SteamID64: ' + userinput4)  # Print SteamID64 form user input
         print(pause)
-        main_menu()
+        userinputx = input('Do you want to save this SteamID to history?' '\n' '1. Yes' '\n' '2. No' '\n' 'Answer: ')
+        if userinputx == '1':
+            file = open('history.txt', 'a')
+            file.write('\n' + 'Steam ID: Steam_0:1:' + str(SteamID_2_64_conv) + '\n' + 'Steam3: U:1:' +
+                       str(SteamID32_64_conv) + '\n' + 'Steam ID32: ' + str(SteamID32_64_conv) + '\n' +
+                       'Steam ID64: ' + (userinput4) + '\n' + (pause))
+            file.close()
+            main_menu()
+        else:
+            main_menu()
 
 
 ID_change_value = 76561197960265728
