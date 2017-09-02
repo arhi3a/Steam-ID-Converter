@@ -13,6 +13,7 @@
 -- Steam3
 -- SteamID32
 -- SteamID64
+-- You are asked if you want to save SteamID to history
 - Script returns to the selection menu 
 
 
@@ -21,7 +22,7 @@
 
 ### To Do:
 - Add getting SteamID from Nickname input
-- Saving history of converted SteamID
+- ~~Saving history of converted SteamID~~
 - Change function names to be easier to understand in 1st look
 - Make the code smaller (less use of print() etc.)
 
