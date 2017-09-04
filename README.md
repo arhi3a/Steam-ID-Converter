@@ -24,7 +24,7 @@
 - Add getting SteamID from Nickname input
 - ~~Saving history of converted SteamID~~
 - ~~Change function names to be easier to understand in 1st look~~
-- Make the code smaller (less use of print() etc.)
+- ~~Make the code smaller (less use of print() etc.)~~ (I won't do it it easier to understand this way :))
 
 
 
