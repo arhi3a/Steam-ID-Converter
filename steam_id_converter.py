@@ -125,9 +125,6 @@ class Convert(object):
             return int(self.sid)
 
 
-from Steam_ID_Converter2 import Convert
-
-
 class Menu(Convert):
     """Simple text menu for converter"""
 
