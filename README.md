@@ -23,6 +23,7 @@
 - Saving history of converted SteamID
 - Add converting choices in menu
 - Exit, convert many etc.
+- Upload separated versions for menu and main code!!!
 
 
 
